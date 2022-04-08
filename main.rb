@@ -1,3 +1,4 @@
+require 'json'
 require_relative 'lib/game'
 
 game = Game.new('SPEED')

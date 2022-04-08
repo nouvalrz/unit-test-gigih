@@ -1,4 +1,6 @@
 require 'game'
+require 'httparty'
+require 'json'
 
 describe 'Game' do
   describe '#match_word' do
@@ -29,6 +31,13 @@ describe 'Game' do
       expect(result).to eq("\u{1F7E6}\u{1F7E6}\u{1F7E9}\u{1F7E6}\u{1F7E6}")
     end
 
-  
+    it 'should receive actual word' do
+      game = Game.new('DRINK')
+      guess_word = 'ABCDE'
+    
+      result = game.match_word(guess_word)
+
+      expect(result).to eq("Not a word")
+    end
   end
 end

@@ -1,0 +1,2 @@
+U:RDoc::Attr[iI"provisional:ETI"MIME::Type#provisional;TI"RW;T:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"MIndicates whether the MIME type's registration with IANA is provisional.;T:
+@fileI"lib/mime/type.rb;T:0@omit_headings_from_table_of_contents_below0F@I"MIME::Type;TcRDoc::NormalClass0
