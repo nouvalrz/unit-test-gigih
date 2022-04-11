@@ -103,7 +103,18 @@ Interesting isn't it? Let's do this!
 
 ### Your First Spec
 
-To use RSpec in Replit, run command `rspec --version` in Replit console. Once we have confirmed RSpec is there, let's start initializing RSpec in your working directory. To do this, run `rspec --init`. It should create an `.rspec` file and a spec directory `spec/spec_helper.rb`. Next, let's write our first test.
+To use RSpec in Replit, run command `rspec --version` in Replit console. When given the following choice, select the second one (`rubyPackages.rspec-core.out`):
+
+![alt text](assets/rspec-replit.png)
+
+Then, execute the following commands in Replit console or shell:
+
+```ruby
+gem install rspec-expectations --version 3.10.2
+gem install rspec-mocks --version 3.10.2
+```
+
+Once we have confirmed RSpec is there, let's start initializing RSpec in your working directory. To do this, run `rspec --init`. It should create an `.rspec` file and a spec directory `spec/spec_helper.rb`. Next, let's write our first test.
 
 If this is the first time you are doing TDD, you might be a little bit confused and think, "how do I write a test when the code is not there yet?" If you feel that way, don't worry, it's very normal. In fact, we do think that the term "TDD" is a little bit of a misnomer. Instead of testing something, what we are going to do is actually specifying behaviors of our program.
 

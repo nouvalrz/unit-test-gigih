@@ -1,6 +1,4 @@
 require 'game'
-require 'httparty'
-require 'json'
 
 describe 'Game' do
   describe '#match_word' do
