@@ -8,11 +8,9 @@ class Game
   def match_word(guess_word)
     result = "\u{1F7E6}\u{1F7E6}\u{1F7E6}\u{1F7E6}\u{1F7E6}"
 
-    uri = URI("https://api.dictionaryapi.dev/api/v2/entries/en/#{guess_word}")
-
     if guess_word.length != @secret_word.length
       'Not same length'
-    elsif Net::HTTP.get_response(uri).code == '404'
+    elsif is_not_word?(guess_word)
       'Not a word'
     else
       guess_word.split('').each_with_index do |letter, index|
@@ -24,5 +22,11 @@ class Game
       end
       result
     end
+  end
+
+  private
+  def is_not_word?(guess_word)
+    uri = URI("https://api.dictionaryapi.dev/api/v2/entries/en/#{guess_word}")
+    return true if Net::HTTP.get_response(uri).code == '404'
   end
 end
